@@ -1,47 +1,51 @@
 {
-	"name": "wxapp-runner",
-	"displayName": "wxapp-runner",
-	"description": "vscode微信小程序预览工具",
-	"icon": "icon.png",
-	"version": "0.0.1",
-	"publisher": "maxoyed",
-	"author": {
-		"name": "maxoyed",
-		"email": "maxoyed@gmail.com",
-		"url": "https://www.maxoyed.com"
-	},
-	"engines": {
-		"vscode": "^1.31.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/maxoyed/wxapp-runner.git"
-	},
-	"license": "MIT",
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.wxappPreview"
-	],
-	"main": "./extension",
-	"contributes": {
-		"keybindings": [{
-			"key": "Alt+Shift+p",
-			"command": "extension.wxappPreview"
-		}],
-		"commands": [{
-			"command": "extension.wxappPreview",
-			"title": "wxapp preview"
-		}]
-	},
-	"scripts": {
-		"postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"vscode": "^1.1.28"
-	},
-	"devDependency": {
-		"axios": "^0.18.0"
-	}
+  "name": "wxapp-runner",
+  "displayName": "wxapp-runner",
+  "description": "vscode微信小程序预览工具",
+  "icon": "icon.png",
+  "version": "0.0.1",
+  "publisher": "maxoyed",
+  "author": {
+    "name": "maxoyed",
+    "email": "maxoyed@gmail.com",
+    "url": "https://www.maxoyed.com"
+  },
+  "engines": {
+    "vscode": "^1.31.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxoyed/wxapp-runner"
+  },
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:wxappPreview"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "keybindings": [
+      {
+        "key": "Alt+Shift+P",
+        "command": "wxappPreview"
+      }
+    ],
+    "commands": [
+      {
+        "command": "wxappPreview",
+        "title": "wxapp preview"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "vscode": "^1.1.28"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }

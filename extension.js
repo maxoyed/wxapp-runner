@@ -12,7 +12,7 @@ const fs = require('fs');
  */
 function activate(context) {
 
-	let wxappPreview = vscode.commands.registerCommand('extension.wxappPreview', function () {
+	let disposable = vscode.commands.registerCommand('wxappPreview', function () {
 		let folder = vscode.workspace.workspaceFolders
 		if (folder) {
 			fs.readdir(folder[0].uri.fsPath, (err, files) => {
@@ -35,14 +35,11 @@ function activate(context) {
 
 	})
 
-	context.subscriptions.push(wxappPreview);
+	context.subscriptions.push(disposable);
 }
 exports.activate = activate;
 
 // this method is called when your extension is deactivated
 function deactivate() {}
 
-module.exports = {
-	activate,
-	deactivate
-}
+exports.deactivate = deactivate;
